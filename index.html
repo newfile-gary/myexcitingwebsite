@@ -7,25 +7,27 @@
         <style>
             *{box-sizing:border-box;}
             body{margin:0 auto;}
-            header .logo{
+            .logo{
                 padding-left:100px;
                 font-size:1.5em;
                 line-height:50px;
             }
-            header ul{list-style-type:none;margin:10px 0;padding:0;
+            nav {position:sticky;/*sticky在父元素内有效果*/
+                top:0;left:0;}
+            nav ul{list-style-type:none;margin:10px 0;padding:0;
                 display:flex;
                 align-items: start;
             }
-            header ul li{
+            nav ul li{
                 flex:1;
             }
-            header ul li a{
+            nav ul li a{
                 background-color:black;color:white;
                 padding:5px 20px;
                 text-decoration: none;
                 display:block;
             }
-            header ul li a:hover{background-color:grey;}
+            nav ul li a:hover{background-color:grey;}
             main{
                 margin:10px 100px;
                 display:grid;
@@ -48,11 +50,11 @@
             .photos img{width:100%;}
 
             @media screen and (max-width:600px){
-                header .logo{
+                .logo{
                     padding:0;
                     text-align: center;
                 }
-                header ul{
+                nav ul{
                     display:block;
                     align-items: start;
                 }
@@ -67,10 +69,10 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="logo">
-                My exciting website!
-            </div>
+        <div class="logo">
+            My exciting website!
+        </div>
+        <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
@@ -78,7 +80,7 @@
                 <li><a href="#">Our history</a></li>
                 <li><a href="#">contacts</a></li>
             </ul>
-        </header>
+        </nav>
         <main>
             <article>
                 <h2>An Exciting Blog Post</h2>
